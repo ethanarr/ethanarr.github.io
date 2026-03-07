@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* SECTION BLOCKS */
+    .project-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .project-section.reverse {
+      direction: rtl;
+    }
+
+    .project-section.reverse > * {
+      direction: ltr;
+    }
+
+    .project-section-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .project-section-text h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-section-text p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .project-section-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      transition: transform 0.4s ease;
+    }
+
+    .project-section-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    /* REFLECTION — full width */
+    .project-reflection {
+      margin-bottom: 5rem;
+    }
+
+    .project-reflection h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-reflection h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-reflection img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      margin-bottom: 1.75rem;
+      transition: transform 0.4s ease;
+    }
+
+    .project-reflection img:hover {
+      transform: scale(1.01);
+    }
+
+    .project-reflection p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      .project-section {
+        grid-template-columns: 1fr;
+      }
+      .project-section.reverse {
+        direction: ltr;
+      }
+      .project-section-image img {
+        height: 220px;
+      }
+      .project-reflection img {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- PAGE TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle"></p>
+    <h1>Porch Swings</h1>
+  </div>
+
+  <!-- CHALLENGE STATEMENT -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Challenge</em></h2>
+      <p>
+        <!-- What was the problem or challenge statement? What were you asked to solve?
+             What constraints did you have to work within? -->
+       My mom saw a Pinterest post about a porch swing and wanted one. My dad, being a carpenter, said he could build it, but he put me in charge
+        of the design since he knew I’m into engineering. We had a few constraints: it had to be big enough for three people, strong enough to 
+        support more than their combined weight, and built to swing safely. We also wanted it to look nice and match the style of our porch.
+
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="swingcover.jpeg" alt="porch swing">
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="project-section reverse">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Research</em></h2>
+      <p>
+        <!-- What did you research? What did you learn before starting to build?
+             What existing solutions or concepts did you look into? -->
+       The swing had to be designed to fit a cushion, because it’s way more comfortable to sit on something couch-like than on a hard bench.
+        We chose a baby crib mattress size, 52" long by 28" wide, so we designed the swing around those dimensions. I also researched different 
+        types of wood and fasteners to make sure the swing would be sturdy and safe. I looked at several designs online for inspiration, but we
+         ultimately created our own design to match our specific needs and style.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="swingsketch.jpg" alt="Swing sketch">
+    </div>
+  </div>
+
+  <!-- DEVELOP SOLUTIONS -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>Developing <em>Solutions</em></h2>
+      <p>
+        <!-- What solutions did you come up with? What did you try?
+             What failed, what worked, how did you iterate? -->
+        I shared my ideas with my dad, and with his knowledge, he helped me figure out what to change, which ideas were solid, and the best way to approach 
+        the build. He helped me construct it, and we made a few adjustments along the way. Time to paint!
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="swinggrass.jpg" alt="porch swing done and on the grass">
+    </div>
+  </div>
+
+  <!-- FINAL PROJECT & REFLECTION -->
+  <div class="project-reflection">
+    <div class="section-divider"></div>
+    <h2>Final Project <em>& Reflection</em></h2>
+    <img src="swingpaint.jpg" alt="porch swing after painting">
+    <p>
+      <!-- What was the final result? What did you learn?
+           What would you do differently? What are you most proud of? -->
+      After the swing turned out great, my mom’s friends started asking where she got it. That gave me the idea to make more and sell/install
+       them for people. It turned into a great side hustle, and I made over $2,000. Through this process, I learned a lot about efficient
+        manufacturing and how to market a product. If I did this again, I’d focus even more on advertising to reach more people.
+    </p>
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+</body>
+</html>

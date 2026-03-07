@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics IA</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    .project-intro {
+      max-width: 720px;
+      margin-bottom: 3rem;
+    }
+
+    .project-intro p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* PDF EMBED */
+    .pdf-wrapper {
+      margin-bottom: 3rem;
+    }
+
+    .pdf-wrapper h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .pdf-wrapper h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .pdf-wrapper iframe {
+      width: 100%;
+      height: 850px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .pdf-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: gap 0.2s ease;
+    }
+
+    .pdf-download:hover {
+      gap: 0.7rem;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-wrapper iframe {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle">IB Physics — Internal Assessment</p>
+    <h1>NACA 2421 Airfoil —<br><em>lift vs. temperature.</em></h1>
+  </div>
+
+  <!-- PARAGRAPH -->
+  <div class="project-intro">
+    <div class="section-divider"></div>
+    <p>
+     I studied whether air interacting with an airfoil at different temperatures would affect the amount of lift the airfoil produced. 
+     For this research project, I used a 3D-printed airfoil and a wind tunnel to test lift at different temperatures. I measured lift 
+     using pressure sensors and ran tests with the wind tunnel both indoors and outdoors to create a temperature difference.
+
+  <!-- PDF EMBED -->
+  <div class="pdf-wrapper">
+    <h2>Read the <em>full paper.</em></h2>
+    <iframe src="Difference in lift on airfoil when changing temperature (1).pdf" title="Physics IA — NACA 2421 Airfoil"></iframe>
+    <br>
+    
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+</body>
+</html>

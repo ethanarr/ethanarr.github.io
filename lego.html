@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* SECTION BLOCKS */
+    .project-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .project-section.reverse {
+      direction: rtl;
+    }
+
+    .project-section.reverse > * {
+      direction: ltr;
+    }
+
+    .project-section-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .project-section-text h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-section-text p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .project-section-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      transition: transform 0.4s ease;
+    }
+
+    .project-section-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    /* REFLECTION — full width */
+    .project-reflection {
+      margin-bottom: 5rem;
+    }
+
+    .project-reflection h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-reflection h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-reflection img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      margin-bottom: 1.75rem;
+      transition: transform 0.4s ease;
+    }
+
+    .project-reflection img:hover {
+      transform: scale(1.01);
+    }
+
+    .project-reflection p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      .project-section {
+        grid-template-columns: 1fr;
+      }
+      .project-section.reverse {
+        direction: ltr;
+      }
+      .project-section-image img {
+        height: 220px;
+      }
+      .project-reflection img {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- PAGE TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle"></p>
+    <h1>University of Cincinnati Lego Robotics Competition</h1>
+  </div>
+
+  <!-- CHALLENGE STATEMENT -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Challenge</em></h2>
+      <p>
+        <!-- What was the problem or challenge statement? What were you asked to solve?
+             What constraints did you have to work within? -->
+        We were tasked with building a robot and a playfield that followed the competition rules. Last year’s challenge was using the bot 
+        to deliver food to tables. The bot had to be built using only the LEGO pieces provided in the kit, and it had to complete deliveries 
+        within a certain amount of time. In addition to the competition runs, we gave a presentation at the end explaining our design process 
+        and how we built the bot. The engineering design process was a major part of the competition, and we had to show how we applied it throughout
+         development.
+<br><br>
+This year’s project is focused on wheelchair accessibility in the workplace. We are tasked with making the bot navigate narrow pathways,
+ rough terrain, and a ramp section of the map.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="legodream.jpg" alt="accessible workplace">
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="project-section reverse">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Research</em></h2>
+      <p>
+        <!-- What did you research? What did you learn before starting to build?
+             What existing solutions or concepts did you look into? -->
+       Under research, we discovered that the most challenging and important part of this project was the playfield. Since the bot was autonomous, 
+       it had to use color sensors, distance sensors, and touch sensors to navigate the playfield and complete deliveries. We had to research how 
+       to use these sensors and how to program them to work together. <br><br> We also researched different design ideas for the bot and how to build it 
+       using only the LEGO pieces provided in the kit. We looked into different types of wheels and motors, as well as different ways to mount the
+        sensors. We also had to learn how to program the bot using LEGO Mindstorms software, which was new to us. Overall, we learned a lot about 
+        robotics, programming, and engineering design through this project.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="legoplay2.JPG" alt="playfield">
+    </div>
+  </div>
+
+  <!-- DEVELOP SOLUTIONS -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>Developing <em>Solutions</em></h2>
+      <p>
+        <!-- What solutions did you come up with? What did you try?
+             What failed, what worked, how did you iterate? -->
+        In the end, we decided to place the tables in a cross orientation so it was easier to identify which table was which. 
+        We used color sensors to detect each table’s color and confirm where the bot was on the map.<br></br>br We also used distance sensors 
+        so the bot would stop if something was in front of it, since part of the competition included random obstacles and the bot was
+         expected to stop and wait until the obstacle was removed. The drop-off mechanism was simple: a lever arm that moved up or down 
+         depending on whether we wanted to place the plate or pick it up.
+
+
+ </p>
+    </div>
+    <div class="project-section-image">
+      <img src="legobot.JPG" alt="bot">
+    </div>
+  </div>
+
+  <!-- FINAL PROJECT & REFLECTION -->
+  <div class="project-reflection">
+    <div class="section-divider"></div>
+    <h2>Final Project <em>& Reflection</em></h2>
+    <img src="legocomp.jpeg" alt="competition">
+    <p>
+      <!-- What was the final result? What did you learn?
+           What would you do differently? What are you most proud of? -->
+      In the end, we placed first in the competition, even though it was our school’s first year participating and we had no prior experience with 
+      LEGO robotics. We were really proud of how well our bot performed and how well we worked together as a team.<br><br>
+With this project, I learned how important it is to read the rules and constraints carefully, because that was a huge part of the challenge. 
+We had a cool idea to use an electromagnet to deliver the food, and we even got it working, but I went home that night, reread the rules, and 
+realized we had to scrap the whole idea because it violated the rule that all parts had to come from the kit.
+      
+    </p>
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* SECTION BLOCKS */
+    .project-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .project-section.reverse {
+      direction: rtl;
+    }
+
+    .project-section.reverse > * {
+      direction: ltr;
+    }
+
+    .project-section-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .project-section-text h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-section-text p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .project-section-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      transition: transform 0.4s ease;
+    }
+
+    .project-section-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    /* REFLECTION — full width */
+    .project-reflection {
+      margin-bottom: 5rem;
+    }
+
+    .project-reflection h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-reflection h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-reflection img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      margin-bottom: 1.75rem;
+      transition: transform 0.4s ease;
+    }
+
+    .project-reflection img:hover {
+      transform: scale(1.01);
+    }
+
+    .project-reflection p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      .project-section {
+        grid-template-columns: 1fr;
+      }
+      .project-section.reverse {
+        direction: ltr;
+      }
+      .project-section-image img {
+        height: 220px;
+      }
+      .project-reflection img {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- PAGE TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle"></p>
+    <h1>Fireplace Safety System</h1>
+  </div>
+
+  <!-- CHALLENGE STATEMENT -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Challenge</em></h2>
+      <p>
+        <!-- What was the problem or challenge statement? What were you asked to solve?
+             What constraints did you have to work within? -->
+        Design and build a safety system for a fireplace that can detect dangerous conditions
+         (like uncombusted gas) and automatically shut off the gas supply to prevent accidents or turn on a warning light based on the severity of the condition. 
+         The system should be reliable, cheap, and work in real-time to ensure safety.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="gaschal.jpg" alt="stock photo of a fireplace">
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="project-section reverse">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Research</em></h2>
+      <p>
+        <!-- What did you research? What did you learn before starting to build?
+             What existing solutions or concepts did you look into? -->
+        This challenge was presented in my engineering class, given a real-world situation, we had to develop the logic using AOI gates. We worked
+         through truth tables and K-maps to build out the logic, then designed and simulated the circuit in Multisim before physically building it on a 
+         breadboard with real components.<br><br>
+I'm taking this project further by building a full real-life version, substituting fire for water to safely recreate the simulation. I'll be presenting
+ the completed system at the SkillsUSA State Competition for Principles of Engineering Technology in May 2026
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="research-photo.jpg" alt="[Describe photo]">
+    </div>
+  </div>
+
+  <!-- DEVELOP SOLUTIONS -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>Developing <em>Solutions</em></h2>
+      <p>
+        <!-- What solutions did you come up with? What did you try?
+             What failed, what worked, how did you iterate? -->
+        comming soon!
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="develop-photo.jpg" alt="comming soon!">
+    </div>
+  </div>
+
+  <!-- FINAL PROJECT & REFLECTION -->
+  <div class="project-reflection">
+    <div class="section-divider"></div>
+    <h2>Final Project <em>& Reflection</em></h2>
+    <img src="final-photo.jpg" alt="comming soon!">
+    <p>
+      <!-- What was the final result? What did you learn?
+           What would you do differently? What are you most proud of? -->
+      comming soon!
+    </p>
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+</body>
+</html>

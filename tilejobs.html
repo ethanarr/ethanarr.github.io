@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Jobs</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    .project-intro {
+      max-width: 720px;
+      margin-bottom: 3.5rem;
+    }
+
+    .project-intro p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      line-height: 1;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle">Trade Work</p>
+    <h1>Tile Jobs —<br><em>residential installs.</em></h1>
+  </div>
+
+  <!-- PARAGRAPH -->
+  <div class="project-intro">
+    <div class="section-divider"></div>
+    <p>
+      Picked up residential tile jobs my sophomore summer to earn money, applying skills learned through my experience at ENC Buildings. [Add anything else you want here — types of jobs, where you worked, what you learned, how many jobs you've done, etc.]
+    </p>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <img src="tile1.jpg" alt="Tile job 1" onclick="openLightbox(this.src)">
+    <img src="tile2.jpg" alt="Tile job 2" onclick="openLightbox(this.src)">
+    <img src="tile3.jpg" alt="Tile job 3" onclick="openLightbox(this.src)">
+    <img src="tile4.jpg" alt="Tile job 4" onclick="openLightbox(this.src)">
+    <img src="tile5.jpg" alt="Tile job 5" onclick="openLightbox(this.src)">
+    <img src="tile6.jpg" alt="Tile job 6" onclick="openLightbox(this.src)">
+    <!-- Add or remove <img> tags as needed -->
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="" alt="Full size image">
+</div>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>

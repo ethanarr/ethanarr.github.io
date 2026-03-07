@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-hero {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .project-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-page-hero .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* SECTION BLOCKS */
+    .project-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .project-section.reverse {
+      direction: rtl;
+    }
+
+    .project-section.reverse > * {
+      direction: ltr;
+    }
+
+    .project-section-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .project-section-text h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-section-text p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .project-section-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      transition: transform 0.4s ease;
+    }
+
+    .project-section-image img:hover {
+      transform: scale(1.02);
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    /* REFLECTION — full width */
+    .project-reflection {
+      margin-bottom: 5rem;
+    }
+
+    .project-reflection h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-reflection h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-reflection img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      filter: contrast(1.05);
+      margin-bottom: 1.75rem;
+      transition: transform 0.4s ease;
+    }
+
+    .project-reflection img:hover {
+      transform: scale(1.01);
+    }
+
+    .project-reflection p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    @media (max-width: 768px) {
+      .project-section {
+        grid-template-columns: 1fr;
+      }
+      .project-section.reverse {
+        direction: ltr;
+      }
+      .project-section-image img {
+        height: 220px;
+      }
+      .project-reflection img {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- PAGE TITLE -->
+  <div class="project-page-hero">
+    <p class="subtitle"></p>
+    <h1>3D Printed Fidget Toys</h1>
+  </div>
+
+  <!-- CHALLENGE STATEMENT -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Challenge</em></h2>
+      <p>
+        <!-- What was the problem or challenge statement? What were you asked to solve?
+             What constraints did you have to work within? -->
+        Design a 3D printed fidget toy that has moving parts and is fun to play with, make sure it is designed well enough to be printed in bulk
+         and is durable enough to be used as a fidget toy.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="fidgetfirst.webp" alt="Fidget toys">
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <div class="project-section reverse">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>The <em>Research</em></h2>
+      <p>
+        <!-- What did you research? What did you learn before starting to build?
+             What existing solutions or concepts did you look into? -->
+       Since the fidgets were for a chapter fundraiser, I researched what types of fidgets students our age would actually buy. 
+       Through classroom surveys and feedback from friends, I found that the most popular options were spinners, cubes, and fidget triangles.
+        I was able to find most of the fidget toy designs for free online, so that part was easy. But we were missing a fidget triangle and a
+         school mascot keychain, so I had to design those from scratch in CAD.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="3dfidgetcad.png" alt="Cad design of fidget toy">
+    </div>
+  </div>
+
+  <!-- DEVELOP SOLUTIONS -->
+  <div class="project-section">
+    <div class="project-section-text">
+      <div class="section-divider"></div>
+      <h2>Developing <em>Solutions</em></h2>
+      <p>
+        <!-- What solutions did you come up with? What did you try?
+             What failed, what worked, how did you iterate? -->
+        You’d think 3D-printing a fidget toy would be straightforward, but it actually took a lot of trial and error to get the designs right. 
+        This ended up being one of the most iterative projects I’ve worked on, because even small design changes had a big impact on how well the
+         toy functioned. For example, the amount of surface area touching the print bed was critical; if there wasn’t enough, the print would fail,
+          too much the fitment was off. The tolerances also had to be dialed in for the moving parts, because if they were too tight, nothing moved,
+           and if they were too loose, it felt sloppy.<br><br>
+
+This design has two separate parts that fit together, and I had to iterate both pieces over and over to get the fit just right. The CAD work took a 
+lot of skill, and I used features like revolutions, chamfers, fillets, rigid joints, and many more. Honestly, bringing this to life from just
+ a picture online was hard. I had to come up with my own measurements, sizing, and overall dimensions.
+      </p>
+    </div>
+    <div class="project-section-image">
+      <img src="fidgetpic.jpeg" alt="Printing fidget toys">
+    </div>
+  </div>
+
+  <!-- FINAL PROJECT & REFLECTION -->
+  <div class="project-reflection">
+    <div class="section-divider"></div>
+    <h2>Final Project <em>& Reflection</em></h2>
+    <img src="final-photo.jpg" alt="[Describe final project photo]">
+    <p>
+      <!-- What was the final result? What did you learn?
+           What would you do differently? What are you most proud of? -->
+      In the end, I’m very proud of how the triangle and Viking keychain turned out. The fidget triangle actually came out better than the original
+       picture, and the keychain was a fun way to show school spirit. We ended up selling around 70 fidgets total, and as of March 7, 2026, we’ve had
+        3 additional sales. We’re planning to make a few more sales before the end of the school year, then donate the remaining fidgets to elementary
+         schools or the school reward program. If I did this again, I’d focus more on advertising and getting a card reader to increase sales, since 
+         almost nobody carries cash anymore. Overall, I’m really happy with how the fidgets turned out, and I learned a lot about 3D printing and CAD 
+         design through this project.
+    </p>
+  </div>
+
+  <button onclick="history.back()">← Back to Projects</button>
+
+</div>
+
+</body>
+</html>
