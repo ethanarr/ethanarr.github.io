@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
 <nav>
     <a href="#home">Home</a>
     <a href="projects.html">Projects</a>
@@ -16,7 +15,7 @@
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
-
+ 
 <section id="home">
     <h1>Ethan<br><em>Arreguin</em></h1>
     <p>
@@ -25,12 +24,93 @@
         around building, testing, and iterating on real engineering systems.
     </p>
 </section>
-
+ 
 <img src="medoingcoolstuff.jpg" alt="Picture of me working with wires" class="home-image">
-
+ 
+<!-- ANNOUNCEMENTS -->
+<section id="announcements">
+    <h2 class="announce-title">Announcements</h2>
+    <div class="announce-list">
+ 
+        <!-- Add new announcements here — newest at the top -->
+        <div class="announce-item">
+            <span class="announce-tag">Internship</span>
+            <p class="announce-text">Excited to announce that I've secured an NDT internship at Standard Aero's Cincinnati plant. I am  
+                looking forward to getting hands-on experience in non-destructive testing within a real aerospace facility.</p>
+            <span class="announce-date">April 16 2026</span>
+        </div>
+ 
+    </div>
+</section>
+ 
+<style>
+#announcements {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+}
+ 
+.announce-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+ 
+.announce-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+ 
+.announce-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.2rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: left;
+    flex-wrap: wrap;
+}
+ 
+.announce-tag {
+    background: var(--accent);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+ 
+.announce-text {
+    flex: 1;
+    font-size: 0.97rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+ 
+.announce-date {
+    font-size: 0.82rem;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+</style>
+ 
 <section id="projects">
     <h2>Some of my projects</h2>
-
+ 
     <!-- PROJECT 1 -->
     <a href="Jetengineprojectpage.html" class="project">
         <div class="project-image">
@@ -47,7 +127,7 @@
             <p class="status">Completed</p>
         </div>
     </a>
-
+ 
     <!-- PROJECT 2 -->
     <a href="safedescentspage.html" class="project">
         <div class="project-image">
@@ -61,7 +141,7 @@
             <p class="status">In Progress</p>
         </div>
     </a>
-
+ 
     <!-- PROJECT 3 -->
     <a href="fireplacesafetyprojectpage.html" class="project">
         <div class="project-image">
@@ -76,14 +156,12 @@
             <p class="status">In Progress</p>
         </div>
     </a>
-
+ 
     <div class="view-all-container">
         <a href="projects.html" class="view-all">View All Projects →</a>
     </div>
-
+ 
 </section>
-
+ 
 </body>
 </html>
-
-
