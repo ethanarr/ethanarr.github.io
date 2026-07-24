@@ -196,7 +196,7 @@ I'm taking this project further by building a full real-life version, substituti
       </p>
     </div>
     <div class="project-section-image">
-      <img src="research-photo.jpg" alt="comming soon!">
+      <img src="Sensor.png" alt="comming soon!">
     </div>
   </div>
 
@@ -208,11 +208,21 @@ I'm taking this project further by building a full real-life version, substituti
       <p>
         <!-- What solutions did you come up with? What did you try?
              What failed, what worked, how did you iterate? -->
-        comming soon!
+        The core logic design was built around a Boolean expression derived from a truth table and minimized
+         using a Karnaugh map, then implemented physically using 74LS-series AND, OR, and NOT gates. For the
+          sensor system, the TSAL6200 IR emitter and TSOP38238 receiver were selected specifically for their 
+          built-in 38 kilohertz bandpass filtering, which eliminated ambient light interference that had plagued 
+          earlier sensor attempts. To drive the emitter at the required 38 kilohertz, a signal generator was used 
+          to produce a modulated square wave, which was gated using an AND gate to create timed bursts that 
+          prevented the receiver's automatic gain control circuit from desensitizing to the continuous signal. 
+          A transistor buffer stage was added between the logic circuit and the emitter array to provide 
+          sufficient current to drive all four sensor pairs simultaneously without loading down the logic gates. 
+          The fluid shutoff system used a solenoid valve controlled by the logic circuit output, with a pump sized 
+          to maintain consistent flow pressure without overpowering the valve fittings.
       </p>
     </div>
     <div class="project-section-image">
-      <img src="develop-photo.jpg" alt="comming soon!">
+      <img src="powersupplys.jpeg" alt="comming soon!">
     </div>
   </div>
 
@@ -220,11 +230,26 @@ I'm taking this project further by building a full real-life version, substituti
   <div class="project-reflection">
     <div class="section-divider"></div>
     <h2>Final Project <em>& Reflection</em></h2>
-    <img src="final-photo.jpg" alt="comming soon!">
+    <video autoplay loop playsinline controls style="width: 100%; height: 420px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); filter: contrast(1.05); margin-bottom: 1.75rem;">
+  <source src="gasvid.mp4" type="video/mp4">
+</video>
     <p>
       <!-- What was the final result? What did you learn?
            What would you do differently? What are you most proud of? -->
-      comming soon!
+      The completed circuit successfully demonstrated a fully discrete logic-based fireplace safety system capable
+       of detecting flame loss across four independent sensor zones and triggering an automatic gas shutoff 
+       response. Every stage of the project produced lessons that went beyond what any classroom exercise could 
+       replicate — from discovering that IR receivers require modulated signals, to learning how transistor 
+       saturation and AGC behavior affect real circuit performance. The most valuable engineering habit developed
+        through this project was testing incrementally after every added component, which consistently made errors
+         visible immediately rather than allowing them to compound into untraceable failures. If this project were 
+         repeated, significantly more time would be invested in component research before building, as several 
+         hours of troubleshooting could have been avoided by reading datasheets more carefully from the start. 
+         The physical breadboard wiring also became increasingly difficult to manage as complexity grew, and a 
+         future iteration would benefit from a cleaner layout or a custom PCB. Ultimately this project demonstrated
+          that the foundational principles of digital electronics — Boolean logic, gate networks, and signal
+           integrity — are not just academic concepts but living engineering tools that require real judgment, 
+           patience, and problem-solving to apply successfully.
     </p>
   </div>
 
